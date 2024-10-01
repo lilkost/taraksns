@@ -11,7 +11,11 @@ html {
     cursor: none;
 }
 .sections{
-    background: linear-gradient(90deg, rgba(0,36,29,1) 10%, rgba(9,9,121,1) 35%, rgba(255,0,26,1) 100%);
+    /* background: linear-gradient(90deg, rgba(0,36,29,1) 10%, rgba(9,9,121,1) 35%, rgba(255,0,26,1) 100%); */
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     max-width: 100vw;
     width: 100%;
     height: 100svh;
@@ -44,9 +48,9 @@ html {
 
 .cursor-circle {
     position: absolute;
-    width: 500px;
-    height: 500px;
-    background-color: #c4c4c4;
+    width: 400px;
+    height: 400px;
+    /* background-color: ; */
     border-radius: 42% 58% 70% 30%/45% 45% 55% 55%;
 
     text-align: center;
@@ -54,8 +58,12 @@ html {
     pointer-events: none;
 
     animation: morph 6s linear infinite;
-    transition: top 250ms linear, left 250ms linear;
+    /* transition: top 250ms ease, left 250ms ease; */
+    mix-blend-mode:difference;
+    background-color: #fff;
 
+    overflow: hidden;
+    z-index: 1;
 }
 
 @keyframes morph{
@@ -68,6 +76,10 @@ html {
     67% {
         border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     }
+}
+
+.tarakan{
+    opacity: 0;
 }
 
 .tarakans-1 img{
@@ -85,8 +97,12 @@ html {
 .tarakans-5 img{
     width: 50px;
 }
-
+.tarakan{
+    pointer-events: none;
+}
 .tarakan img {
+    mix-blend-mode: unset;
+    pointer-events: none;
     animation: bounceTarakan 1s linear infinite;
 }
 
@@ -140,7 +156,6 @@ html {
         left: 60%;
     }
 }
-
 
 .tarakans-4{
     position: absolute;
@@ -201,6 +216,15 @@ html {
     }
 }
 
-.tarakan{
-    opacity: 0;
+.tarakans{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    mix-blend-mode: unset;
+    pointer-events: none;
+    z-index: 2;
 }

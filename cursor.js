@@ -166,7 +166,8 @@ function checkIntersection() {
 // Проверяем пересечение при загрузке и перемещении блока
 document.addEventListener('mousemove', (event) => {
     // Пример перемещения блока с мышью
-    movingBlock.style.left = `${event.clientX}px`; // Центрируем по мыши
-    movingBlock.style.top = `${event.clientY}px`; // Центрируем по мыши
+    // movingBlock.style.left = `${event.clientX}px`; // Центрируем по мыши
+    // movingBlock.style.top = `${event.clientY}px`; // Центрируем по мыши
     checkIntersection();
 });
+checkIntersection();
